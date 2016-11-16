@@ -14,11 +14,8 @@ article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
 #post - processing Data
 
-words<-deleteSpaces(article)
+words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
-print(words) 
-
-
-a<-grep("Trump", words, ignore.case = TRUE) 
+words
 
 
