@@ -7,8 +7,8 @@
 #setwd(choose.dir(getwd(), "Select your working folder"))
 
 source("functions.R")
-fileName <- 'test.txt'
-#fileName <- 'article.txt'
+#fileName <- 'test.txt'
+fileName <- 'article.txt'
 
 article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
@@ -16,6 +16,8 @@ article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
 words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
+wordsList<-list()
+wordsList<-counterWords(words)
 words
 
 

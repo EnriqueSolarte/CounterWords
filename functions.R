@@ -29,3 +29,16 @@ filterPuntationMarks<-function(stringVariable){
   
   
 }
+
+  wordsListf<-list()
+  
+  while(length(wordsf)>0){
+    aux<-grep(wordsf[1], wordsf, ignore.case = TRUE)
+    wordsListf[wordsf[1]]<-length(aux)
+    wordsf<-wordsf[-aux]
+  }
+  
+  return(wordsListf)
+  
+  
+}
