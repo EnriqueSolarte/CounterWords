@@ -12,11 +12,11 @@ filterPuntationMarks<-function(stringVariable){
   
   stringVariable<- gsub(pattern = "[[:punct:]]", replacement = "", stringVariable)
   
-  punct<- " 's  \\r \\t \\nBy  \\n"
+  punct<- " 's  \\r \\t \\nBy  \\n "
   punct<-deleteSpaces(punct)
   
   for (i in 1:length(punct)){
-    stringVariable<-gsub(punct[i],"",stringVariable)
+    stringVariable<-gsub(punct[i]," ",stringVariable)
   } 
   stringVariable<-deleteSpaces(stringVariable)
   return(stringVariable)

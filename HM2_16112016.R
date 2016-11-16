@@ -16,9 +16,8 @@ article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
 words<-deleteSpaces(article)
 words<-filterPuntationMarks(words)
-print(words) 
+words 
 
 
-a<-grep("Trump", words, ignore.case = TRUE) 
 
 
