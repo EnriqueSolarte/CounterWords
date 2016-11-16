@@ -30,6 +30,7 @@ filterPuntationMarks<-function(stringVariable){
   
 }
 
+counterWords<-function(wordsf){
   wordsListf<-list()
   
   while(length(wordsf)>0){
@@ -39,6 +40,5 @@ filterPuntationMarks<-function(stringVariable){
   }
   
   return(wordsListf)
-  
   
 }
