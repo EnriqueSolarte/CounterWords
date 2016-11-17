@@ -7,17 +7,21 @@
 #setwd(choose.dir(getwd(), "Select your working folder"))
 
 source("functions.R")
-fileName <- 'test.txt'
-#fileName <- 'article.txt'
+#fileName <- 'test.txt'
+fileName <- 'article.txt'
 
 article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
-#post - processing Data
-
-words<-deleteSpaces(article)
+words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
-words 
+words
+listWords<-list()
+listWords<-counterWords(words)
 
 
 
+cat('', file = 'listWords.txt')
+sink("listWords.txt")
+print(listWords)
+sink()
 
