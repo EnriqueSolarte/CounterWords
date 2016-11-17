@@ -7,11 +7,8 @@
 #setwd(choose.dir(getwd(), "Select your working folder"))
 
 source("functions.R")
-<<<<<<< HEAD
-fileName <- 'test.txt'
-=======
+
 #fileName <- 'test.txt'
->>>>>>> parent of 6e14f1e... inicio
 fileName <- 'article.txt'
 
 article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
