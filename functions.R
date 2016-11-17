@@ -15,9 +15,9 @@ deleteSpaces<-function(variable){
 
 filterPuntationMarks<-function(stringVariable){
   
-  stringVariable<- gsub(pattern = "[[:punct:]]", replacement = "", stringVariable)
   
-  punct<- " 's  \\r \\t \\nBy  \\n ' ` "
+  
+  punct<- " \\r \\t \\nBy  \\n"
   punct<-deleteSpaces(punct)
   
   for (i in 1:length(punct)){
@@ -25,6 +25,19 @@ filterPuntationMarks<-function(stringVariable){
   } 
   stringVariable<-wordsVectorizing(stringVariable)
   stringVariable<-deleteSpaces(stringVariable)
+  
+  punct<- " : , 's  -- - --- "
+  punct<-deleteSpaces(punct)
+  
+  for (i in 1:length(punct)){
+    stringVariable<-gsub(punct[i]," ",stringVariable)
+  }
+  
+  stringVariable<- gsub(pattern = "[[:punct:]]", replacement = "", stringVariable)
+  
+  stringVariable<-wordsVectorizing(stringVariable)
+  stringVariable<-deleteSpaces(stringVariable)
+  
   return(stringVariable)
   
   

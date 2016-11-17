@@ -12,15 +12,16 @@ fileName <- 'article.txt'
 
 article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
-#post - processing Data
-
 words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
+words
 listWords<-list()
 listWords<-counterWords(words)
-words
 
-cat('list of Words found', file = 'listWords.txt')
+
+
+cat('', file = 'listWords.txt')
 sink("listWords.txt")
 print(listWords)
 sink()
+
