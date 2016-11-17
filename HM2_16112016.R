@@ -16,8 +16,11 @@ article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
 words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
-wordsList<-list()
-wordsList<-counterWords(words)
+listWords<-list()
+listWords<-counterWords(words)
 words
 
-
+cat('list of Words found', file = 'listWords.txt')
+sink("listWords.txt")
+print(listWords)
+sink()

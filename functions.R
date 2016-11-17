@@ -17,7 +17,7 @@ filterPuntationMarks<-function(stringVariable){
   
   stringVariable<- gsub(pattern = "[[:punct:]]", replacement = "", stringVariable)
   
-  punct<- " 's  \\r \\t \\nBy  \\n"
+  punct<- " 's  \\r \\t \\nBy  \\n ' ` "
   punct<-deleteSpaces(punct)
   
   for (i in 1:length(punct)){
@@ -31,14 +31,18 @@ filterPuntationMarks<-function(stringVariable){
 }
 
 counterWords<-function(wordsf){
-  wordsListf<-list()
+  listWordsf<-list()
   
   while(length(wordsf)>0){
     aux<-grep(wordsf[1], wordsf, ignore.case = TRUE)
-    wordsListf[wordsf[1]]<-length(aux)
-    wordsf<-wordsf[-aux]
+    aux<-aux[nchar(wordsf[aux])==nchar(wordsf[1])]
+    
+     listWordsf[wordsf[1]]<-length(aux)
+      wordsf<-wordsf[-aux]
+    
   }
   
-  return(wordsListf)
+  return(listWordsf)
   
 }
+
