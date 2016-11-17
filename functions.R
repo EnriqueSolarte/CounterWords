@@ -55,8 +55,6 @@ counterWords<-function(wordsf){
       wordsf<-wordsf[-aux]
     
   }
-  
   return(listWordsf)
-  
 }
 
