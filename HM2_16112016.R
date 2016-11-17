@@ -16,7 +16,6 @@ article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
 
-listWords<-list()
 listWords<-counterWords(words)
 
 cat('', file = 'listWords.txt')
@@ -24,4 +23,5 @@ sink("listWords.txt")
 print(listWords)
 sink()
 
-barplot(unlist(listWords))
+barplot(listWords[c(1:10)])
+

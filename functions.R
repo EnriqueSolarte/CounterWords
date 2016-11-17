@@ -3,7 +3,7 @@ wordsVectorizing<-function(variable){
   variable<-variable[nchar(variable)!=0]  
   return(variable)
 }
-
+#function Ok
 
 deleteSpaces<-function(variable){
   
@@ -11,11 +11,9 @@ deleteSpaces<-function(variable){
   variable<- gsub(pattern = "[[:blank:]]", replacement = "", variable)
   return(variable)
 }
-
+#function OK
 
 filterPuntationMarks<-function(stringVariable){
-  
-  
   
   punct<- " \\r \\t \\nBy  \\n"
   punct<-deleteSpaces(punct)
@@ -42,9 +40,9 @@ filterPuntationMarks<-function(stringVariable){
   
   
 }
+#function Ok
 
 counterWords<-function(wordsf){
-
 
   listWordsf<-list()
   
@@ -53,8 +51,9 @@ counterWords<-function(wordsf){
     aux<-aux[nchar(wordsf[aux])==nchar(wordsf[1])]
       listWordsf[wordsf[1]]<-length(aux)
       wordsf<-wordsf[-aux]
-    
   }
+  listWordsf<-sort(unlist(listWordsf),decreasing = TRUE)
+  
   return(listWordsf)
 }
 
