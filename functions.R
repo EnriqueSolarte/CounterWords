@@ -24,7 +24,7 @@ filterPuntationMarks<-function(stringVariable){
   stringVariable<-wordsVectorizing(stringVariable)
   stringVariable<-deleteSpaces(stringVariable)
   
-  punct<- " : , 's  -- - --- "
+  punct<- " : , 's ' -- - --- "
   punct<-deleteSpaces(punct)
   
   for (i in 1:length(punct)){
