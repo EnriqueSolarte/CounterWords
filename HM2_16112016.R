@@ -8,14 +8,13 @@
 
 source("functions.R")
 fileName <- 'test.txt'
-#fileName <- 'article.txt'
+fileName <- 'article.txt'
 
 article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
 words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
 listWords<-counterWords(words)
-
 
 
 cat('', file = 'listWords.txt')
