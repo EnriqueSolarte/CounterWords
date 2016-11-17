@@ -44,7 +44,7 @@ filterPuntationMarks<-function(stringVariable){
 }
 
 counterWords<-function(wordsf){
-  listWordsf<-list()
+  
   
   while(length(wordsf)>0){
     aux<-grep(wordsf[1], wordsf, ignore.case = TRUE)
