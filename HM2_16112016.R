@@ -25,5 +25,3 @@ sink("listWords.txt")
 print(listWords)
 sink()
 
-
-barplot(unlist(listWords))
