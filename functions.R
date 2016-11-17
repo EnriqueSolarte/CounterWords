@@ -44,8 +44,13 @@ filterPuntationMarks<-function(stringVariable){
 }
 
 counterWords<-function(wordsf){
+<<<<<<< HEAD
   
   listWordsf<-NULL
+=======
+  listWordsf<-list()
+  
+>>>>>>> parent of 6e14f1e... inicio
   while(length(wordsf)>0){
     aux<-grep(wordsf[1], wordsf, ignore.case = TRUE)
     aux<-aux[nchar(wordsf[aux])==nchar(wordsf[1])]

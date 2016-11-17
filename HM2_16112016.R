@@ -7,13 +7,19 @@
 #setwd(choose.dir(getwd(), "Select your working folder"))
 
 source("functions.R")
+<<<<<<< HEAD
 fileName <- 'test.txt'
+=======
+#fileName <- 'test.txt'
+>>>>>>> parent of 6e14f1e... inicio
 fileName <- 'article.txt'
 
 article<-readChar(fileName, file.info(fileName)$size);rm(fileName)
 
 words<-wordsVectorizing(article)
 words<-filterPuntationMarks(words)
+words
+listWords<-list()
 listWords<-counterWords(words)
 
 
@@ -22,9 +28,3 @@ sink("listWords.txt")
 print(listWords)
 sink()
 
-
-listWords<-as.data.frame(listWords)
-x<-table(listWords)
-x<-c(2,5,8,15)
-names(x)<-c("a","b","c")
-barplot(x)
